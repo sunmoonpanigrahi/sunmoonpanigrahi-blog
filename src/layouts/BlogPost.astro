@@ -45,6 +45,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.title h1 {
 				margin: 0 0 0.5em 0;
 			}
+			.title h1::after {
+				margin-left: auto;
+				margin-right: auto;
+			}
 			.date {
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));

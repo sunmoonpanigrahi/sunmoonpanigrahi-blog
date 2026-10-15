@@ -5,13 +5,18 @@
  */
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	/* Blue and orange theme */
+	--blue: #1d4ed8;
+	--navy: #0b2a5b;
+	--orange: #f97316;
+	--orange-dark: #c2410c;
+	--accent: var(--blue);
+	--accent-dark: var(--navy);
+	--black: 11, 42, 91;
+	--gray: 71, 95, 140;
+	--gray-light: 219, 234, 254;
+	--gray-dark: 30, 41, 59;
+	--gray-gradient: rgba(var(--gray-light), 70%), #fff;
 	--box-shadow:
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
@@ -68,7 +73,16 @@ a {
 	color: var(--accent);
 }
 a:hover {
-	color: var(--accent);
+	color: var(--orange-dark);
+}
+h1::after {
+	content: '';
+	display: block;
+	width: 64px;
+	height: 5px;
+	margin-top: 0.25em;
+	background: var(--orange);
+	border-radius: 3px;
 }
 p {
 	margin-bottom: 1em;
@@ -104,7 +118,7 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
+	border-left: 4px solid var(--orange);
 	padding: 0 0 0 20px;
 	margin: 0;
 	font-size: 1.333em;
