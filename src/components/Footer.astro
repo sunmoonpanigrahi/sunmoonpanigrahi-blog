@@ -4,15 +4,46 @@ import { SITE_TITLE } from '../consts';
 const today = new Date();
 ---
 
+<div class="horizon" aria-hidden="true">
+	<svg viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice">
+		<circle class="sun" cx="860" cy="78" r="34"></circle>
+		<path
+			class="ridge-back"
+			d="M0 80 L110 45 L210 70 L320 30 L420 65 L540 40 L640 75 L760 35 L870 70 L980 40 L1090 68 L1200 50 V120 H0 Z"
+		></path>
+		<path class="ridge-front" d="M0 100 Q150 70 300 95 T600 92 T900 88 T1200 94 V120 H0 Z"></path>
+	</svg>
+</div>
 <footer>
 	&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
 </footer>
 <style>
+	.horizon {
+		margin-top: auto;
+		padding-top: 3em;
+		line-height: 0;
+	}
+	.horizon svg {
+		display: block;
+		width: 100%;
+		height: clamp(60px, 9vw, 120px);
+		margin-bottom: -1px;
+	}
+	.sun {
+		fill: #fb923c;
+		opacity: 0.9;
+		filter: drop-shadow(0 0 16px rgba(253, 186, 116, 0.9));
+	}
+	.ridge-back {
+		fill: #6f86c9;
+	}
+	.ridge-front {
+		fill: var(--navy);
+	}
 	footer {
-		padding: 2em 1em 6em 1em;
+		padding: 1em 1em 4em 1em;
 		background: var(--navy);
-		border-top: 3px solid var(--orange);
-		color: #fff;
+		color: #e0ecff;
 		text-align: center;
 	}
 </style>

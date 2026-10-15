@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog'))
@@ -18,9 +19,8 @@ const posts = (await getCollection('blog'))
 	</head>
 	<body>
 		<Header />
+		<Hero title="Hello, I'm SunMoon 👋" subtitle={SITE_DESCRIPTION} />
 		<main>
-			<h1>Hello, I'm SunMoon 👋</h1>
-			<p>{SITE_DESCRIPTION}</p>
 			<h2>Latest posts</h2>
 			<ul>
 				{
