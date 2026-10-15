@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Sunmoon Panigrahi';
-export const SITE_DESCRIPTION = 'Thoughts, notes and stories by Sunmoon Panigrahi.';
+export const SITE_DESCRIPTION = 'Thoughts, notes and stories by SunMoon Panigrahi.';
